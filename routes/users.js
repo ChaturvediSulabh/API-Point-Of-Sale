@@ -148,6 +148,10 @@ router.get('/checkout/*', function(req, res, next){
     }); // End of  getAllData(collection,function(){
   } // End of if (customer != 'DEFAULT')
   else{
+    var adAndBasePrice = []; //default Price list
+    adAndBasePrice.push('1=269.99');
+    adAndBasePrice.push('2=322.99');
+    adAndBasePrice.push('3=394.99');
     customer = 'Customer: '+customer;
     var scanner = 'SKUs Scanned: Classic = '+classic+' and Standout = '+standout+' and Premium = '+premium;
     totalAmount = (classic * adAndBasePrice[0].split('=').map(Number)[1].toFixed(2)) + (standout * adAndBasePrice[1].split('=').map(Number)[1].toFixed(2)) + (premium * adAndBasePrice[2].split('=').map(Number)[1].toFixed(2));
