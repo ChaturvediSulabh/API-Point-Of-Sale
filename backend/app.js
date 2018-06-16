@@ -11,7 +11,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 // connect to mongodb and l;et auto-create database inventory
-mongoose.connect('mongodb://localhost:27017/gdpAdInventory');
+//mongoose.connect('mongodb://localhost:27017/gdpAdInventory');
+mongoose.connect('mongodb://gdp:gdp123@ds161700.mlab.com:61700/gdpadinventory');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
