@@ -1,7 +1,7 @@
 var adinventory = require('../models/AdInventory');
 //var deals = require('../models/deals');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/gdpAdInventory');
+mongoose.connect('mongodb://gdp:gdp123@ds161700.mlab.com:61700/gdpadinventory');
 
 var inventory = [
   new adinventory({
