@@ -6,13 +6,8 @@ var collection = require('../models/AdInventory');
 /*****************************************************
 Function to fetch data from MongoDB for each Customer
 *****************************************************/
-var adAndBasePrice = []; //default Price list
-adAndBasePrice.push('1=269.99');
-adAndBasePrice.push('2=322.99');
-adAndBasePrice.push('3=394.99');
-// push more here
 var rest = [];
-function getAllData(adAndBasePrice,collection,customer,claasic,standout,premium,callback){
+function getAllData(collection,customer,claasic,standout,premium,callback){
   collection.find({Criteria: new RegExp(customer,'i')}).exec(function(err,result){
     if(err){
       console.log(err);
@@ -48,9 +43,14 @@ router.get('/checkout/*', function(req, res, next){
     }
   }
   if(customer != 'DEFAULT'){
-    getAllData(adAndBasePrice,collection,customer,classic,standout,premium,function(){
+    getAllData(collection,customer,classic,standout,premium,function(){
       console.log('customer = '+customer+'; classic = '+classic+' and standout = '+standout+' and Premium = '+premium);
       var totalAmount = 0;
+      var adAndBasePrice = []; //default Price list
+      adAndBasePrice.push('1=269.99');
+      adAndBasePrice.push('2=322.99');
+      adAndBasePrice.push('3=394.99');
+      // push more here
       for(var i = 0;i < rest[0].length;i++){
          var str = JSON.stringify(rest[0][i]);
          console.log(rest[0][i]);
@@ -114,14 +114,17 @@ router.get('/checkout/*', function(req, res, next){
         console.log('dealIs amount = '+amount)
         var idx = 0;
         if(adId === '1'){
+          console.log('here 1');
           totalAmount = amount;
           idx = adAndBasePrice.indexOf('1=269.99');
           adAndBasePrice.splice(idx, 1);
         }else if(adId === '2'){
+           console.log('here 2');
            totalAmount = amount;
            idx = adAndBasePrice.indexOf('2=322.99');
            adAndBasePrice.splice(idx, 1);
-        }else{
+        }else if(adId === '3'){
+          console.log('here 3 and array is = '+adAndBasePrice);
           totalAmount = amount;
           idx = adAndBasePrice.indexOf('3=394.99');
           adAndBasePrice.splice(idx, 1);
