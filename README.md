@@ -7,12 +7,12 @@ GDP Coding Exercise
 # Build Summary
   Programming - Node.js (Express Middleware), Please refer package.json file to know about what packages have been used.
 
-  DataBase - MongoDB, hosted on mLab - mongodb://gdp:gdp123@ds161700.mlab.com:61700/gdpadinventory
+  DataBase - MongoDB, hosted on mLab -  
 
   TestData and How to Test - https://gdp-checkout-microservice.herokuapp.com/
 
-# Detailed Documentation 
-  /doc/As-Is_Build.docx
+# Detailed Documentation
+  /doc/Release Notes - GDP Coding Excercise.docx
 
 GDP is in the process of rewriting its job ads checkout system. You have been assigned to build this new system. We want to offer different products to recruiters:
 

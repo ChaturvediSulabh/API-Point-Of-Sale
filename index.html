@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>gdp-checkout-microservice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="page-header">
+      <h1>GDP Checkout Microservice API</h1>
+      <h2>Built and Maintained By - Sulabh Chaturvedi</h2>
+      <h3>full source code at - https://github.com/ChaturvediSulabh/seek-GDP-POS.git</h3> 
+    </div>
+    <div>
+      <h2>What is this?</h2>
+      <p>
+        This is a my Backend solution to GDP Coding Exercise, wherein, I have been asked to develop a new checkout system for GDP. For details on what this is about, please refer - https://github.com/ChaturvediSulabh/seek-GDP-POS/README.md
+      <h3>Usage:</h3>
+      <p>
+        Route - https://gdp-checkout-microservice.herokuapp.com/users/checkout/
+      </p>
+      <p>
+        How to use? - Provide route with customer name and id's of classic, standout and premium ads.
+      </p>
+      <p>
+        What are the Id's for aforementioed ads ? - Classic = 1, standout = 2 and premium = 3
+      </p>
+      <p>
+          Example please ? copy any url below and try to run it in the browser.
+      </p>
+      <p>
+      <pre>https://gdp-checkout-microservice.herokuapp.com/users/checkout/default123</pre>
+      <h3>Example Response:</h3>
+      <pre>
+        Customer: DEFAULT
+        SKUs Scanned: Classic = 1 and Standout = 1 and Premium = 1
+        Total Expected: Total Expected: 987.97
+      </pre>
+      <pre>https://gdp-checkout-microservice.herokuapp.com/users/checkout/unilever1113</pre>
+      <h3>Example Response:</h3>
+      <pre>
+        Customer: UNILEVER
+        SKUs Scanned: Classic = 3 and Standout = 0 and Premium = 1
+        Total Expected: Total Expected: 934.97
+      </pre>
+    </pre>
+    <pre>https://gdp-checkout-microservice.herokuapp.com/users/checkout/apple2223</pre>
+    <h3>Example Response:</h3>
+    <pre>
+      Customer: APPLE
+      SKUs Scanned: Classic = 0 and Standout = 3 and Premium = 1
+      Total Expected: Total Expected: 1294.96
+    </pre>
+    <pre>https://gdp-checkout-microservice.herokuapp.com/users/checkout/nike3333</pre>
+    <h3>Example Response:</h3>
+    <pre>
+      Customer: NIKE
+      SKUs Scanned: Classic = 0 and Standout = 0 and Premium = 4
+      Total Expected: Total Expected: 1519.96
+    </pre>
+    </div>
+  </body>
+</html>
