@@ -1,7 +1,7 @@
 # seek-GDP-POS
 GDP Coding Exercise
 
-# [Solution Link - https://gdp-checkout-microservice.herokuapp.com]
+# [Click here to access the solution](https://gdp-checkout-microservice.herokuapp.com)
   Above page will let you know on how to use the app or test the app
 
 # Build Summary
@@ -9,7 +9,7 @@ GDP Coding Exercise
 
   DataBase - MongoDB, hosted on mLab -  
 
-  TestData and How to Test - https://gdp-checkout-microservice.herokuapp.com/
+  [TestData and How to Test](https://gdp-checkout-microservice.herokuapp.com/)
 
 # Detailed Documentation
   /doc/Release Notes - GDP Coding Excercise.docx
